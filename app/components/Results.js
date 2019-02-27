@@ -4,6 +4,7 @@ import { FaCompass, FaBriefcase, FaUsers, FaUserFriends, FaCode, FaUser } from '
 import PropTypes from 'prop-types'
 import Card from './Card'
 import Loading from './Loading'
+import Tooltip from './Tooltip'
 
 function ProfileList ({ profile }) {
   return (
@@ -13,12 +14,16 @@ function ProfileList ({ profile }) {
         {profile.name}
       </li>
       {profile.location && <li>
-        <FaCompass size={22} color='rgb(144, 116, 255)'/>
-        {profile.location}
+        <Tooltip text="User's location">
+          <FaCompass size={22} color='rgb(144, 116, 255)'/>
+          {profile.location}
+        </Tooltip>
       </li>}
       {profile.company && <li>
-        <FaBriefcase size={22} color='#795548'/>
-        {profile.company}
+        <Tooltip text="User's company">
+          <FaBriefcase size={22} color='#795548'/>
+          {profile.company}
+        </Tooltip>
       </li>}
       <li>
         <FaUsers color='rgb(129, 195, 245)' size={22} />
