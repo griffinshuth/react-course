@@ -49,6 +49,10 @@ li {
   justify-content: space-around;
 }
 
+.space-between {
+  justify-content: space-between;
+}
+
 .header-lg {
   font-size: 35px;
   font-weight: 300;
@@ -263,4 +267,8 @@ li {
   color: #DADADA;
   background: #1c2022;
   min-height: 100%;
+}
+
+.nav li {
+  margin-right: 10px;
 }
